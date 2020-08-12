@@ -1,0 +1,38 @@
+@startuml
+start
+
+:生成唯一标识;
+:发送消息;
+:参数检验;
+if (密聊消息) then (yes)
+    if (文本消息) then (yes)
+    else (no)
+        fork
+        :对象存储;
+        fork again
+        :定期清理;
+        end fork
+    endif
+    :Redis存储;
+else (no)
+    if (文本消息) then (yes)
+    else (no)
+        :对象存储;
+    endif
+    :MySQL持久化消息;
+endif
+:更新聊天卡片;
+
+split
+    :响应消息信息;
+    :消息排序展示;
+split again
+    fork
+    :推送消息;
+    fork again
+    :缓存消息;
+    end fork
+end split
+
+stop
+@enduml

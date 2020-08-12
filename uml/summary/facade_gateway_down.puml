@@ -1,0 +1,9 @@
+@startuml
+start
+:业务微服务;
+:指定标识和payload;
+:长连接推送接口;
+:匹配长连接通道;
+:推送数据;
+stop
+@enduml

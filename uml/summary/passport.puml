@@ -1,0 +1,35 @@
+@startuml
+start
+:访问系统;
+if (存在session) then (yes)
+	:携带session请求服务端;
+else (no)
+    if (未注册) then (yes)
+    	:点击注册跳转;
+    	:输入注册手机号和密码;
+    	:请求服务端并发送验证码;
+    	if (验证码正确) then (yes)
+    	    :注册成功登录跳转;
+    	else (no)
+    	    :提示失败信息;
+    	    stop
+    	endif
+    endif
+    :登录系统;
+    split
+        :账号密码登录;
+    split again
+        :手机验证码登录;
+    end split
+    :验证登录凭证;
+    if (验证成功) then (yes)
+        :进入系统;
+    else (no)
+        :提示失败信息;
+        stop
+    endif
+endif
+:服务端返回响应;
+:客户端渲染展示;
+stop
+@enduml

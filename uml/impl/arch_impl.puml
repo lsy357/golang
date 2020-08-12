@@ -1,0 +1,51 @@
+@startuml
+
+class DepartmentServer {
+    + pullDepartmentUsers(Context ctx, int64 depID)
+    + pullDepartmentsByIDs(Context ctx, int64[] depIDs)
+    + pullDepartmentsByTenantID(Context ctx, int64 tenantID)
+    + putDepartment(Context ctx, int64 tenantID, Department dep)
+    + updateDepartment(Context ctx, int64 tenantID, int64 depID)
+    + deleteDepartmentByID(Context ctx, int64 depID)
+    + genDepartmentInvitationToken(Context ctx, int64 inviter, int64 invitee)
+'    + pullDepartmentInvitationToken(Context ctx, int64 dep, int64 userID)
+    + triggerDepartmentInvitation(Context ctx, int64 dep, String token)
+    + removeDepartmentUser(Context ctx, int64 depID, int64 userID)
+}
+
+DepartmentServer --> UserClient
+DepartmentServer --> DepartmentDAO
+DepartmentServer --> RedisCli
+
+class TenantServer {
+    + putTenant(Context ctx, Tenant tenant)
+}
+
+TenantServer --> TenantDAO
+
+class UserClient {
+    + pullUsers(Context ctx, int64 userIDs)
+    + updateUsers(Context ctx, User[] users)
+}
+
+note "Thrift RPC" as n1
+UserClient ..n1
+n1.. UserServer
+
+class UserServer {
+    + pullUsers(Context ctx, int64 userIDs)
+    + updateUsers(Context ctx, User[] users)
+}
+
+UserServer --> UserDAO
+UserServer --> RedisCli
+
+class UserDAO {}
+class DepartmentDAO {}
+
+class RedisCli {
+    + boolean set(String key, String value, int64 expire)
+    + String get(String key)
+}
+
+@enduml

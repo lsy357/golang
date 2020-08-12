@@ -1,0 +1,16 @@
+@startuml
+start
+split
+    :HTTP;
+    :Nginx网关;
+    :匹配路由信息;
+    :反向代理转发;
+split again
+    :WebSocket;
+    :解析payload;
+    :RPC封装;
+    :RPC调用;
+end split
+:业务层网关;
+stop
+@enduml

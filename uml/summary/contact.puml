@@ -1,0 +1,23 @@
+@startuml
+start
+:联系人页面;
+split
+:联系人列表;
+    split
+    :删除联系人;
+    split again
+    :查看联系人信息;
+    end split
+split again
+:联系人申请列表;
+    split
+    :同意申请;
+    split again
+    :拒绝申请;
+    end split
+split again
+:手机号搜索联系人;
+:申请添加联系人;
+end split
+stop
+@enduml

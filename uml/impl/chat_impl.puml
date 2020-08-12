@@ -1,0 +1,66 @@
+@startuml
+
+class ChatServer {
+    + putChat(Context ctx, int64 ownerID, String[] chatterIDs, int type, String ChatName)
+    + pullChat(Context ctx, int64 chatID)
+
+    + pullChatChatters(Context ctx, int64 chatID)
+    + putChatChatters(Context ctx, int64 chatID, String[] chatterIDs)
+    + deleteChatChatter(Context ctx, int64 chatID, int64 chatterID)
+
+    + pullUserChatSettings(Context ctx, int64 userID, String[] chatID)
+    + putOrUpdateUserChatSetting(Context ctx, UserChatSetting setting)
+}
+
+ChatServer --> FeedCardClient
+ChatServer --> RedisCli
+ChatServer --> ChatDAO
+ChatServer --> GroupChatDAO
+ChatServer --> P2pChatDAO
+ChatServer --> ChatChatterRefDAO
+ChatServer --> UserChatSettingDAO
+
+class FeedCardClient {
+    + putOrUpdateFeedCards(Context ctx, FeedCard[] cards)
+    + pullFeedCards(Context ctx, int64 userID, int64 cursor, int count)
+'    + deleteFeedCards(Context ctx, int64 userID, int64 chatID)
+
+    + putOrUpdateShortcut(Context ctx, int64 userID, String[] chatIDs)
+    + pullShortcut(Context ctx, int64 userID)
+'    + DeleteShortcutResponse(Context ctx, int64 userID)
+}
+
+note "Thrift RPC" as n1
+FeedCardClient ..n1
+n1.. FeedCardServer
+
+class FeedCardServer {
+    + putOrUpdateFeedCards(Context ctx, FeedCard[] cards)
+    + pullFeedCards(Context ctx, int64 userID, int64 cursor, int count)
+'    + deleteFeedCards(Context ctx, int64 userID, int64 chatID)
+
+    + putOrUpdateShortcut(Context ctx, int64 userID, String[] chatIDs)
+    + pullShortcut(Context ctx, int64 userID)
+'    + DeleteShortcutResponse(Context ctx, int64 userID)
+}
+
+FeedCardServer --> RedisCli
+FeedCardServer --> FeedCardDAO
+FeedCardServer --> ShortcutDAO
+
+class RedisCli {
+    byte[] get(String key)
+    boolean set(String key, String Value)
+'    boolean expire(String key, int seconds)
+    boolean delete(String key)
+}
+
+class ChatDAO {}
+class GroupChatDAO {}
+class P2pChatDAO {}
+class ChatChatterRefDAO {}
+class UserChatSettingDAO {}
+class FeedCardDAO {}
+class ShortcutDAO {}
+
+@enduml

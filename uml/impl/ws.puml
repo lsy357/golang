@@ -1,0 +1,61 @@
+@startuml
+
+class Frontier {
+    + push(Context ctx, int64[] deviceIDs, byte[] payload)
+}
+
+Frontier o-- ClientManager
+
+class PBFrame {
+    int64 seqID
+    int64 deviceID
+    byte[] payload
+    string service
+    string method
+}
+
+class ClientManager {
+    chan Client register
+    chan Client unregister
+    Map<int64, Client> clients
+    RWMutex lock
+
+    + start()
+    + register()
+    + unregister()
+    + getClient(int64 deviceID)
+    + closeClient(int64 deviceID)
+}
+
+ClientManager --> Client
+
+class Client {
+    String addr
+    Conn socket
+    int64 deviceID
+    chan byte[] sendBuf
+'    Func readDataHandler
+
+    + read() /'for循环，异步读'/
+    + write(byte[] data) /'push方法调用'/
+}
+
+Client --> Dispatcher
+
+class Dispatcher {
+    + dispatch(ServeRequest req, int cmd)
+}
+
+class ServeClient {
+    + serve(ServeRequest req)
+}
+
+class ServeRequestFactory {
+    + getServeRequest([]byte payload)
+}
+
+Dispatcher --> ServeClient
+Dispatcher --> ServeRequestFactory
+Dispatcher --> PBFrame
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+
+class Contact {
+    + pullContacts(Context ctx, int64 userID)
+    + isContactRef(Context ctx, Map<int64, int64> userIDPair)
+
+    + putContactRequest(Context ctx, int64 sender, int64 receiver)
+    + putContacts(Context ctx, int64 contactRequestID)
+    + updateContactRequest(Context ctx, int64 contactRequestID)
+    + pullContactRequestWithReceiver(Context ctx, int64 receiver)
+}
+
+Contact --> contactRequestDAO
+Contact --> contactDAO
+
+class contactRequestDAO {}
+class contactDAO {}
+
+@enduml

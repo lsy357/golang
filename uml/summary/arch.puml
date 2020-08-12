@@ -1,0 +1,47 @@
+@startuml
+start
+
+:登录系统;
+split
+    :管理后台;
+    split
+        :成员列表;
+        split
+            :设置管理员权限;
+        split again
+            :搜索外部用户;
+            :邀请用户加入;
+        split again
+            :踢出用户;
+        end split
+    split again
+        :组织架构列表;
+        split
+            :添加子团队;
+        split again
+            :删除子团队;
+        split again
+            :修改团队信息;
+        end split
+    end split
+split again
+    :功能系统;
+    if (未加入团队) then (yes)
+        split
+            :加入团队;
+            :刷新页面;
+        split again
+            :创建团队;
+            :跳转创建页面;
+        end split
+    else (no)
+    endif
+    split
+        :查看团队列表;
+    split again
+        :查看用户架构信息;
+    end split
+end split
+
+stop
+@enduml

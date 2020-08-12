@@ -1,0 +1,73 @@
+@startuml
+
+class PassportHandler{
+    - final String signInURL
+    - final String signUpURL
+    + signInHandler(Context ctx)
+    + signUpHandler(Context ctx)
+    + sendSMSHandler(Context ctx)
+    + redirect(Context ctx, String url)
+}
+
+PassportHandler --> AccountClient
+PassportHandler --> Middleware
+PassportHandler --> SessionClient
+
+interface Middleware {
+    + handler(Context ctx)
+}
+
+class SessionMiddleware implements Middleware {
+    + handler(Context ctx)
+}
+
+class SessionClient {
+    + getAndRenewal(Context ctx, String sessionKey)
+    + createSession(Context ctx, int64 userID, int64 deviceID)
+}
+
+note "Thrift RPC" as n1
+SessionClient ..n1
+n1.. SessionServer
+
+class SessionServer {
+    + getAndRenewal(Context ctx, String sessionKey)
+    + createSession(Context ctx, int64 userID, int64 deviceID)
+}
+
+class AccountClient {
+    + getAccount(Context ctx, int64 userID)
+    + sendSMS(Context ctx, String mobile)
+    + createAccountWithSMS(Context ctx, String mobile, String pwd, String SMS)
+}
+
+note "Thrift RPC" as n2
+AccountClient ..n2
+n2.. AccountServer
+
+class AccountServer {
+    + getAccountByUserID(Context ctx, int64 userID)
+    + sendSMS(Context ctx, String mobile)
+    + createAccount(Context ctx, String mobile, String pwd, String SMS)
+}
+
+AccountServer --> AccountDAO
+AccountServer --> AliyunSMS
+AccountServer --> RedisCli
+
+class AccountDAO {
+    + getAccountByUserID(Context ctx, int64 userID)
+    + createAccount(Account account)
+}
+
+class AliyunSMS {
+    + sendSMS(String mobile, String smsCode)
+    + genSMSCode()
+}
+
+class RedisCli {
+    + boolean set(String key, String value, int64 expire)
+    + String get(String key)
+}
+
+@enduml
