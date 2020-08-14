@@ -1,0 +1,33 @@
+@startuml
+
+activate UpStream
+UpStream -> Proxy: proxy push request
+activate Proxy
+Proxy -> Proxy: separatePush()
+Proxy -> RedisClient: mGetDeviceInfo()
+activate RedisClient
+RedisClient -> Proxy
+deactivate RedisClient
+Proxy -> Frontier: push request
+activate Frontier
+Frontier -> Epoll: getClients()
+activate Epoll
+Epoll -> Frontier
+deactivate Epoll
+Frontier -> WriteWorkerPool: submit()
+activate WriteWorkerPool
+Frontier -> Proxy
+deactivate Frontier
+Proxy -> UpStream
+deactivate Proxy
+WriteWorkerPool -> WriteWorker: process()
+deactivate UpStream
+activate WriteWorker
+WriteWorker -> Client: write()
+activate Client
+Client -> WriteWorker
+deactivate Client
+deactivate WriteWorker
+deactivate WriteWorkerPool
+
+@enduml

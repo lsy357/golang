@@ -1,0 +1,20 @@
+@startuml
+
+Client -> LoginHandler: login request
+LoginHandler -> Parser: parse()
+Parser -> LoginHandler
+LoginHandler -> Session: getSession()
+Session -> LoginHandler:
+LoginHandler -> RedisClient: getCachedUser()
+RedisClient -> LoginHandler
+LoginHandler -> DAO: getDBUser()
+DAO -> LoginHandler
+LoginHandler -> Session: create()
+Session -> RedisClient: setUser()
+RedisClient -> Session
+Session -> DAO: putUser()
+DAO -> Session
+Session -> LoginHandler
+LoginHandler -> Client: login response
+
+@enduml

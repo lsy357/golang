@@ -44,7 +44,7 @@ func main() {
 	var enqueued, errors int
 	doneCh := make(chan struct{})
 	go func() {
-		for {
+		for {x
 			time.Sleep(1 * time.Second)
 
 			buf := make([]byte, 4)

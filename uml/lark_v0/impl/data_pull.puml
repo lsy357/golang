@@ -1,0 +1,24 @@
+@startuml
+
+start
+:同步FeedCards;
+if (首次启动) then (yes)
+    : cursor=0
+    Refresh同步;
+    repeat
+        :cursor=nextCursor
+            Load More同步;
+    repeat while(返回数量==请求数量)
+else (no)
+    :cursor=localCursor
+         Refresh同步;
+    repeat
+        :cursor=nextCursor
+            Load More同步;
+    repeat while(localCursor>nextCursor)
+endif
+:同步聊天消息;
+:同步pipeline内容;
+end
+
+@enduml

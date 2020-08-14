@@ -1,0 +1,16 @@
+@startuml
+Frontier -> Epoll: wait()
+activate Frontier
+Epoll -> Epoll: wait()
+activate Epoll
+Frontier -> ReadWorkerPool: startWorker()
+activate ReadWorkerPool
+Frontier -> WriteWorkerPool: startWorker()
+activate WriteWorkerPool
+
+deactivate Epoll
+deactivate ReadWorkerPool
+deactivate WriteWorkerPool
+deactivate Frontier
+
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+start
+
+:发送消息;
+:服务端处理;
+:参数检验;
+if (密聊消息) then (yes)
+    if (文本消息) then (yes)
+    else (no)
+        fork
+        :对象存储;
+        fork again
+        :定期清理;
+        detach
+        end fork
+    endif
+    :Redis存储;
+else (no)
+    if (文本消息) then (yes)
+    else (no)
+        :对象存储;
+    endif
+    :MySQL持久化消息;
+endif
+:更新聊天卡片;
+
+split
+    :发送结果响应;
+    :客户端排序展示;
+split again
+    fork
+    :推送消息;
+    detach
+    fork again
+    :缓存消息;
+    detach
+    end fork
+end split
+
+stop
+@enduml

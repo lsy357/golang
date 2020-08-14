@@ -1,0 +1,23 @@
+@startuml
+start
+:输入关键字;
+:点击搜索;
+:Elastic Search搜索;
+:处理查询结果集;
+repeat
+    if (结果为用户) then (yes)
+        if (搜索和被搜索用户可见) then (yes)
+            :添加到响应集;
+        else (no)
+        endif
+    else (no)
+        if (用户在聊天中) then (yes)
+            :添加到响应集;
+        else (no)
+        endif
+    endif
+repeat while (未遍历完搜索结果集)
+:返回响应集;
+:展示查询内容;
+stop
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+
+class Server {
+    + search(Context ctx, String keyword, String type)
+    + startCron()
+}
+
+Server o-- consumerWorker
+Server o-- Searcher
+
+class Searcher {
+    + search(Context ctx, String keyword, String type)
+    + handleResult(Context ctx, Object obj)
+}
+
+Searcher --> ESAccessor
+
+class ESAccessor {
+    + search(Context ctx, String URL, String content)
+}
+
+class consumerWorker {
+    String topic
+    Func consumeFunc
+
+    + start()
+}
+
+class KafkaConsumer {
+    + consume(Context ctx, String topic)
+}
+
+consumerWorker --> KafkaConsumer
+consumerWorker --> Indexer
+
+class Indexer {
+    + putData(Context ctx)
+    + deleteIndex(Context ctx)
+}
+
+@enduml

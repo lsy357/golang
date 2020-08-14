@@ -1,0 +1,69 @@
+@startuml
+
+start
+:访问系统;
+if (未注册) then (yes)
+	:注册账号;
+endif
+:登录系统;
+if (登录成功) then (yes)
+else (no)
+    stop
+endif
+:使用系统;
+split
+    :搜索;
+    split
+        :搜索用户;
+    split again
+        :搜索群聊;
+    end split
+split again
+    :聊天卡片列表;
+    split
+        :点击进入聊天;
+        split
+            :查看消息;
+'            :查看消息已读状态;
+        split again
+            :发送消息;
+'            split
+'                :文本消息;
+'            split again
+'                :图片消息;
+'            split again
+'                :文件消息;
+'            end split
+        split again
+            :管理聊天;
+'            split
+'                :修改聊天设置;
+'            split again
+'                :添加群成员;
+'            end split
+        end split
+    split again
+        :创建聊天;
+'        :设置聊天选项;
+'        :选择群成员;
+    split again
+        :删除聊天卡片;
+    split again
+        :接收消息;
+'        :更新最近消息;
+'        :更新未读消息数量;
+    end split
+split again
+    :联系人页面;
+    split
+        :查看联系人;
+    split again
+        :手机号搜索;
+        :添加好友申请;
+    split again
+        :管理添加请求;
+    end split
+end split
+stop
+
+@enduml

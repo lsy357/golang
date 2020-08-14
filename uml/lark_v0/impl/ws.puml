@@ -1,0 +1,130 @@
+@startuml
+
+/'
+    架构：
+        上行流量：
+            epoll（一个或多个，具体视业务情况而定）IO多路复用监听客户端套接字，之后的数据处理过程通过生产者消费者队列完成；
+        下行流量：
+            使用线程池，之后
+                1. 每个 socket 加一个写锁，防止写数据混乱
+                2. 每个客户端 socket 开一个 goroutine 负责具体的写操作，for+select 阻塞，通过 send_channel 来实现顺序写 //好像没啥必要
+        注：
+            websocket服务是有状态服务，推送时需要将推送流量转发到对应的实例上，需要设置一个Proxy实现流量的分发
+'/
+
+class Frontier {
+    Epoll epoll
+    WorkerPool pool
+
+    + serve(Context ctx, ServeRequest req)
+    + push(Context ctx, int64[] deviceIDs, byte[] payload)
+    + connHandler(Context ctx, HttpResponseWriter rw, HttpRequest httpReq)
+    - publishConnInfo(Context ctx, int64 deviceID, ConnInfo info)
+}
+
+Frontier o-- WorkerPool
+Frontier o-- Epoll
+Frontier --> Task
+Frontier --> RedisCli
+
+class PBFrame {
+    int64 seqID
+    int64 deviceID
+    byte[] payload
+    string service
+    string method
+}
+
+class WorkerPool {
+	context.Context ctx
+	chan Task taskQueue
+	int size
+	sync.WaitGroup wg
+	int8 status
+	context.CancelFunc done
+
+	+ start()
+	+ submit(Task task)
+	+ close()
+}
+
+WorkerPool --> Task
+
+interface Task {
+    error process()
+}
+
+class ReadTask implements Task {
+    Client cli
+    + readProcess()
+}
+
+ReadTask --> Dispatcher
+
+class WriteTask implements Task {
+    Client cli
+    []byte writeBuf
+    + writeProcess()
+}
+
+class Epoll {
+    int fd
+    map<int, Client> fd2Clients
+    map<int64, int> deviceID2FD
+    sync.RWMutex lock
+
+    + start()
+    + add(Client cli)
+    + remove(Client cli)
+    + wait()
+    + getSocketFD(conn net.Conn)
+    + getClient(int64 deviceID)
+    + closeClient(int64 deviceID)
+}
+
+Epoll --> Client
+
+class Client {
+    int fd
+    net.Conn socket
+    int64 deviceID
+    String addr
+    sync.RWMutex lock
+
+    + read()
+    + write(byte[] data)
+    + flush()
+}
+
+class Dispatcher {
+    + dispatch(Context ctx, ServeRequest req)
+}
+
+class ServeClient {
+    + serve(ServeRequest req)
+}
+
+class ServeRequestFactory {
+    + getServeRequest([]byte payload)
+}
+
+Dispatcher --> ServeClient
+Dispatcher --> ServeRequestFactory
+Dispatcher --> PBFrame
+
+class Proxy {
+    + serve(Context ctx, ServeRequest req)
+    + push(Context ctx, int64[] deviceIDs, byte[] payload)
+    - separatedPush(Context ctx, int64[] deviceIDs, byte[] payload)
+    - map<int64, ConnInfo> queryConnInfo(Context ctx, int64[] deviceID)
+}
+
+note "Thrift RPC" as n1
+Proxy ..n1
+n1.. Frontier
+
+Proxy --> RedisCli
+
+class RedisCli {}
+
+@enduml

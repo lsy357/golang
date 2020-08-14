@@ -1,0 +1,86 @@
+@startuml
+
+class MessageServer {
+    + putMessage(Context ctx, byte[] content, int64 senderID, int64 chatID, int64 cid)
+    + pullMessagesByIDs(Context ctx, int64 chatID, string[] messageIDs)
+    + pullMessagesByPositions(Context ctx, int64 chatID, int startPos, int endPos)
+    + deleteMessage(Context ctx, int64 chatID, int64 messageID)
+    + collapseMessage(Context ctx, int64 chatID, int64 messageID)
+    + readMessage(Context ctx, int64 chatID, int64[] messageIDs, int64 readerID)
+    + pullMessageRead(Context ctx, int64[] messageIDs, int64 messageSender, int64 reader)
+    + triggerSecretMessage(Context ctx, int chatID, int64[] messageIDs)
+}
+
+MessageServer --> MessageController
+MessageServer --> PBPacket
+
+class PBPacket {
+    String cid
+    String sid
+    int32 command
+    int8 status
+    byte[] payload
+}
+
+class MessageController {
+    + createMessage(Context ctx, MessageEntity msgEntity)
+    + createSecretMessage(Context ctx, MessageEntity msgEntity)
+    + updateMessage(Context ctx, MessageEntity msgEntity)
+    + updateSecretMessage(Context ctx, MessageEntity msgEntity)
+    + getChatMessagesByIDs(Context ctx, int64 chatID, string[] messageIDs)
+    + getChatMessagesWithPosition(Context ctx, int64 chatID ,int startPos, int endPos)
+    + readMessage(Context ctx, int64 chatID, int64 messageID, int64 readerID)
+    + triggerSecretMessage(Context ctx, int chatID, int64[] messageIDs)
+}
+
+MessageController --> AliyunOSS
+MessageController --> DAO
+MessageController --> MsgEntityDAO
+MessageController --> CacheAccessor
+
+note "Thrift RPC" as n2
+MessageController ..n2
+n2.. FeedCardServer
+
+class FeedCardServer {}
+class CacheAccessor {}
+
+CacheAccessor --> RedisCli
+
+class MsgEntityDAO {}
+MsgEntityDAO --> MessageEntity
+class MessageEntity {}
+
+MessageEntity o--> PBMessage
+
+class PBMessage {
+    int64 id
+    int64 chatID
+    int64 ownerID
+    byte[] content
+    int8 messageType
+    int position
+    int8 status
+    int64 cid
+    int64 createTime
+    int64[] atChatters
+
+    + byte[] serialize(Entity entity)
+    + Entity deserialize(byte[] bytes)
+}
+
+class AliyunOSS {
+    + String store()
+    + String get()
+    + boolean update()
+    + boolean delete()
+}
+
+class RedisCli {
+    byte[] get(String key)
+    boolean set(String key, String Value)
+    boolean expire(String key, int seconds)
+    boolean delete(String key)
+}
+
+@enduml

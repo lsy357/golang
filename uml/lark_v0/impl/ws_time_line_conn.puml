@@ -1,0 +1,19 @@
+@startuml
+
+WSConnListener -> WSConnHandler
+WSConnHandler -> Client: create()
+activate WSConnHandler
+activate Epoll
+activate Client
+Client -> RedisClient: setDeviceInfo()
+activate RedisClient
+deactivate RedisClient
+WSConnHandler -> Epoll: add(c: Client)
+
+deactivate Client
+
+WSConnHandler -> WSConnListener
+deactivate Epoll
+deactivate WSConnHandler
+
+@enduml

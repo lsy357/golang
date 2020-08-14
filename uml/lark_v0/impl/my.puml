@@ -1,0 +1,93 @@
+@startuml
+
+abstract class TTransport {
+    {abstract} open()
+    {abstract} close()
+    {abstract} int read(byte[] buf, int off, int len)
+    {abstract} write(byte[] buf, int off, int len)
+    {abstract} flush()
+}
+abstract class TServerTransport {
+    {abstract} listen()
+    final TTransport accept()
+    {abstract} TTransport acceptImpl()
+}
+abstract class TProtocol {
+    {abstract} writeMessageBegin(TMessage msg)
+    {abstract} writeMessageEnd()
+    {abstract} writeByte()
+    {abstract} writeI64()
+    {abstract} TMessage readMessageBegin()
+    {abstract} readMessageEnd()
+}
+interface TProcessor {
+    process(TProtocol in, out)
+}
+abstract class TServer {
+    TServerTransport serverTransport_;
+    TProcessorFactory processorFactory_;
+    TTransportFactory inputTransportFactory_;
+    TTransportFactory outputTransportFactory_;
+    TProtocolFactory inputProtocolFactory_;
+    TProtocolFactory outputProtocolFactory_;
+
+    serve()
+    stop()
+}
+abstract class TServiceClient {
+    TProtocol iprot_;
+    TProtocol oprot_;
+
+    sendBase(String methodName, TBase<?, ?> args)
+    receiveBase(String methodName, TBase<?, ?> result)
+}
+
+'class TThreadSelectorServer extends TServer {}
+
+'class TNonblockingServerSocket extends TServerTransport{
+'    - ServerSocketChannel serverSocketChannel
+'    - ServerSocket serverSocket_
+'
+'    TNonblockingSocket acceptImpl()
+'}
+
+class CProcessor implements TProcessor {
+    Map<String, ProcessFunction> processMap
+    Stack<Middleware> mws
+
+    registerMiddleware(Middleware mw)
+}
+
+TProtocol o-- TTransport
+TProcessor o-- TProtocol
+
+TServer o-- Middleware
+TServer o-- TServerTransport
+TServer o-- TProtocol
+TServer o-- TProcessor
+
+class CustomizedClient extends TServiceClient {
+    SvrController svrFinder
+    Stack<Middleware> mws
+
+    registerMiddleware(Middleware mw)
+    setTargetTransport(String svrAddr)
+}
+
+CustomizedClient o-- TProtocol
+CustomizedClient o-- SvrController
+CustomizedClient o-- Middleware
+
+interface SvrController {
+    String consulEndPoint
+    String getSvrAddr(String svr)
+    boolean registerSelf()
+    findAllSvr(List<String> svrs)
+}
+
+interface Middleware {
+    preProcess(Meta meta)
+    afterProcess(Meta meta)
+}
+
+@enduml

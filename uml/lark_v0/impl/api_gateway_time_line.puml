@@ -1,0 +1,34 @@
+@startuml
+
+activate Client
+Client -> CmdHandler: client request
+activate CmdHandler
+CmdHandler -> Parser: parse()
+activate Parser
+Parser -> CmdHandler
+deactivate Parser
+CmdHandler -> Dispatcher: dispatch()
+activate Dispatcher
+Dispatcher -> CmdRouter: getCmdHandleSvr()
+activate CmdRouter
+CmdRouter -> Dispatcher
+deactivate CmdRouter
+Dispatcher -> Server: rpc request
+activate Server
+Server -> FuncDispatcher: dispatch()
+activate FuncDispatcher
+FuncDispatcher -> Handler: handle()
+activate Handler
+Handler -> FuncDispatcher
+deactivate Handler
+FuncDispatcher -> Server
+deactivate FuncDispatcher
+Server -> Dispatcher: rpc response
+deactivate Server
+Dispatcher -> CmdHandler
+deactivate Dispatcher
+CmdHandler -> Client: client response
+deactivate CmdHandler
+deactivate Client
+
+@enduml

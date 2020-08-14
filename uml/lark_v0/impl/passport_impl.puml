@@ -1,0 +1,81 @@
+@startuml
+
+class PassportHandler{
+    - final String signInURL
+    - final String signUpURL
+    + signInHandler(Context ctx)
+    + signUpHandler(Context ctx)
+    + sendSMSHandler(Context ctx)
+    + redirect(Context ctx, String url)
+}
+
+PassportHandler --> Middleware
+
+interface Middleware {
+    + handler(Context ctx)
+}
+
+class SessionMiddleware implements Middleware {
+    + handler(Context ctx)
+}
+
+note "Thrift RPC" as n2
+PassportHandler ..n2
+n2.. Account
+
+class Account {
+    + getAccountByUserID(Context ctx, int64 userID)
+    + sendSMS(Context ctx, String mobile)
+    + putAccount(Context ctx, String mobile, String pwd, String SMS)
+}
+
+Account --> AliyunSMS
+
+note "Thrift RPC" as n3
+Account ..n3
+n3.. User
+
+class User {
+    + putUser(Context ctx, User user)
+    + mGetUserByIDs(context, int64 userID)
+}
+
+Account --> AccountDAO
+Account --> RedisCli
+
+User --> KafkaProducer
+
+class KafkaProducer {
+    String topic
+    + sendMsg(Context ctx, String topic, String key, byte[] msg)
+}
+
+User --> UserDAO
+
+class UserDAO {}
+
+class AccountDAO {}
+
+class AliyunSMS {
+    + sendSMS(String mobile, String smsCode)
+    + genSMSCode()
+}
+
+class RedisCli {}
+
+note "Thrift RPC" as n1
+PassportHandler ..n1
+n1.. Session
+
+class Session {
+    + getAndRenewal(Context ctx, String sessionKey)
+    + putSession(Context ctx, int64 userID, int64 deviceID)
+    + logout(int64 userID, int64 deviceID)
+}
+
+Session --> RedisCli
+Session --> SessionDAO
+
+class SessionDAO {}
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+start
+:流量网关;
+:业务网关;
+:payload解析;
+:业务中间件处理;
+:RPC请求分发;
+:业务服务处理;
+:RPC结果返回;
+:处理结果响应;
+stop
+@enduml

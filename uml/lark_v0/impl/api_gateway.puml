@@ -1,0 +1,87 @@
+@startuml
+
+class APIGatewayHandler {
+    + void cmdHandler(Context ctx)
+    + void signInHandler(Context ctx)
+    + void signUpHandler(Context ctx)
+    + void sendSMSHandler(Context ctx)
+}
+
+APIGatewayHandler --> ReverseProxyFactory
+ReverseProxyFactory --> ReverseProxy
+
+class ReverseProxyFactory {
+    + void getReverseProxy(String url)
+}
+
+class ReverseProxy {
+    + void serveHTTP(HttpRespWriter rw, HttpReq httpReq)
+}
+
+class Dispatcher {
+    Map<Integer, String> cmdRouter
+
+    - void init()
+    + void RegisterCmdRoute(int cmd, String svr)
+    + String getCmdHandleSvr(int cmd)
+    + byte[] dispatch(SvrReq req, int cmd)
+}
+
+class SvrReqFactory {
+    + SvrReq getSvrReq(HttpReq httpReq)
+}
+
+class SvrReq {
+    + int64 userID
+    + int64 deviceID
+    + String requestID
+    + String source
+    + byte[] payload
+}
+
+class SvrResp {
+    + int statusCode
+    + String msg
+    + byte[] payload
+}
+
+'class MetricsEmitter {
+'    + void emitCounter(Map<String, String> tags, String name, int value)
+'    + void emitTimer(Map<String, String> tags, String name, int value)
+'}
+
+class ServeClient {
+    + SvrResp serve(SvrReq req)
+}
+
+class Server {
+    + SvrResp serve(SvrReq req)
+}
+
+note "Thrift RPC" as n1
+ServeClient ..n1
+n1.. Server
+
+Server --> FuncDispatcher
+Server --> SvrReq
+Server --> SvrResp
+
+class FuncDispatcher {
+    + dispatch(int cmd)
+    + register(int cmd, Func handler)
+}
+
+
+APIGatewayHandler o-- Dispatcher
+
+
+SvrReqFactory --> SvrReq
+
+'Dispatcher --> MetricsEmitter
+Dispatcher --> SvrReqFactory
+Dispatcher --> ServeClient
+
+ServeClient --> SvrReq
+ServeClient --> SvrResp
+
+@enduml

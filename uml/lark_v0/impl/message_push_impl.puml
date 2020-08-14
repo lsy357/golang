@@ -1,0 +1,54 @@
+@startuml
+
+'class MessageServer {
+'    + putMessage(Ctx, byte[] content, int64 senderID, int64 chatID, int64 cid)
+'}
+'
+'MessageServer --> MessageController
+'MessageServer --> PBPacket
+'
+'class PBPacket {
+'    String cid
+'    String sid
+'    int32 command
+'    int8 status
+'    byte[] payload
+'}
+'
+'class MessageController {
+'    + createMessage(Ctx, MessageEntity msgEntity)
+'}
+
+MessageController --> PushProcessor
+
+class PushProcessor {
+    + getPushUser2Devices(Ctx, int64[] userIDs)
+    + proxyPush(Ctx, int64[] devices, byte[] payload, pushOpt... option)
+}
+
+note "Thrift RPC" as n4
+PushProcessor ..n4
+n4.. SessionServer
+
+class SessionServer {
+    + mGetDevicesByUIDs(Ctx, int64[] userIDs)
+}
+
+note "Thrift RPC" as n1
+PushProcessor ..n1
+n1.. ChatServer
+
+class ChatServer {
+    + pullChatChatters(Ctx, int64 chatID)
+    + pullUserChatSettings(Ctx, int64 userID, String[] chatID)
+}
+
+note "Thrift RPC" as n3
+PushProcessor ..n3
+n3.. FrontierProxy
+
+class FrontierProxy{
+    + push(Ctx, int64[] deviceIDs, byte[] payload)
+}
+
+@enduml

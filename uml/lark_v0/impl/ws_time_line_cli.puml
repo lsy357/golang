@@ -1,0 +1,20 @@
+@startuml
+
+activate Epoll
+activate Client
+Epoll -> ReadWorkerPool: submit(t: Task)
+activate ReadWorkerPool
+ReadWorkerPool -> ReadWorker: process()
+activate ReadWorker
+ReadWorker -> Dispatcher: dispatch()
+activate Dispatcher
+Dispatcher -> ReadWorker: biz rpc response
+deactivate Dispatcher
+ReadWorker -> Client: write()
+deactivate Client
+deactivate ReadWorker
+
+deactivate ReadWorkerPool
+deactivate Epoll
+
+@enduml
