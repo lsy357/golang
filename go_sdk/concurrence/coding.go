@@ -5,8 +5,8 @@ import (
 	"fmt"
 )
 
-// 4个协程，1234号协程只能打印1234数字，打印1234 2341 3412 4123
-func main() {
+// Tecent 算法题：4个协程，1234号协程只能打印1234数字，打印1234 2341 3412 4123
+func TecentCode0() {
 	targetSeq := "1234 2341 3412 4123"
 	chars := []rune(targetSeq)
 	channels := make([]chan byte, 4)

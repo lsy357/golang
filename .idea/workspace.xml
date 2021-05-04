@@ -3,20 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a243fafd-dd1d-4cd5-b5db-2dc8269fe8f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/api_gateway.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/api_gateway.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/api_gateway.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/api_gateway.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/chat_impl.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/chat_impl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/chat_impl.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/chat_impl.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/message_impl.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/message_impl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/message_impl.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/message_impl.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/message_push_impl.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/message_push_impl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/message_push_impl.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/message_push_impl.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/my.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/my.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/my.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/my.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/passport_impl.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/passport_impl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/passport_impl.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/passport_impl.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/ws.png" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/ws.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/impl/ws.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/impl/ws.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/collection/sync_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_sdk/collection/sync_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/concurrence/cas_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_sdk/concurrence/cas_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/concurrence/coding.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_sdk/concurrence/coding.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/concurrence/sync_map.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_sdk/concurrence/sync_map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/pool/worker_pool.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_sdk/pool/worker_pool.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/unsafe/ptr_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_sdk/unsafe/ptr_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,12 +34,45 @@
     <favorites_list name="hello" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/uml/impl/my.puml">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/go_sdk/test/model.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="195">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/design_pattern/singleton/singleton_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding>
+                <element signature="e#19#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/go_sdk/concurrence/mutex_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+              <folding>
+                <element signature="e#14#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/go_sdk/concurrence/sync_map.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1350">
+              <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -91,14 +116,21 @@
       <find>Context ctx</find>
       <find>SvrReqFactory</find>
       <find>reverse</find>
+      <find>CustomizedProcessor</find>
+      <find>while</find>
+      <find>pointer</find>
+      <find>load(</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>Ctx</replace>
+      <replace>CProcessor</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/uml/impl</dir>
       <dir>/usr/local/go/src/runtime</dir>
+      <dir>$PROJECT_DIR$/uml/summary</dir>
+      <dir>/usr/local/go/src/sync/atomic</dir>
     </dirStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
@@ -108,30 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/uml/passport.puml" />
-        <option value="$PROJECT_DIR$/uml/facade.puml" />
-        <option value="$PROJECT_DIR$/uml/facade_gateway.puml" />
-        <option value="$PROJECT_DIR$/uml/facade_gateway_down.puml" />
-        <option value="$PROJECT_DIR$/uml/middleware.puml" />
-        <option value="$PROJECT_DIR$/uml/biz_gateway.puml" />
-        <option value="$PROJECT_DIR$/uml/chat.puml" />
-        <option value="$PROJECT_DIR$/uml/message.puml" />
-        <option value="$PROJECT_DIR$/uml/struct.puml" />
-        <option value="$PROJECT_DIR$/uml/contact.puml" />
-        <option value="$PROJECT_DIR$/uml/search.puml" />
-        <option value="$PROJECT_DIR$/websocket.go" />
-        <option value="$PROJECT_DIR$/websocket/websocket.html" />
-        <option value="$PROJECT_DIR$/websocket/hello.go" />
-        <option value="$PROJECT_DIR$/websocket/std/hello.go" />
-        <option value="$PROJECT_DIR$/websocket/gorilla/client.go" />
-        <option value="$PROJECT_DIR$/websocket/gorilla/server.go" />
-        <option value="$PROJECT_DIR$/thrift/idl.thrift" />
-        <option value="$PROJECT_DIR$/thrift/server/server.go" />
-        <option value="$PROJECT_DIR$/uml/impl/my.go" />
-        <option value="$PROJECT_DIR$/uml/impl/passport.puml" />
-        <option value="$PROJECT_DIR$/uml/impl/arch.puml" />
-        <option value="$PROJECT_DIR$/uml/impl/arch_impl.puml" />
-        <option value="$PROJECT_DIR$/uml/impl/contact.puml" />
         <option value="$PROJECT_DIR$/uml/impl/contact_impl.puml" />
         <option value="$PROJECT_DIR$/websocket/frontier/main.go" />
         <option value="$PROJECT_DIR$/websocket/frontier/client.go" />
@@ -140,7 +148,6 @@
         <option value="$PROJECT_DIR$/uml/impl/search.puml" />
         <option value="$PROJECT_DIR$/uml/impl/search_impl.puml" />
         <option value="$PROJECT_DIR$/golang/concurrence/tx.go" />
-        <option value="$PROJECT_DIR$/golang/concurrence/coding.go" />
         <option value="$PROJECT_DIR$/kafka/producer.go" />
         <option value="$PROJECT_DIR$/lru/lru.go" />
         <option value="$PROJECT_DIR$/util/utils.go" />
@@ -154,15 +161,40 @@
         <option value="$PROJECT_DIR$/golang/pool/worker_pool.go" />
         <option value="$PROJECT_DIR$/uml/impl/passport_impl.puml" />
         <option value="$PROJECT_DIR$/uml/impl/ws.puml" />
-        <option value="$PROJECT_DIR$/uml/impl/chat_impl.puml" />
         <option value="$PROJECT_DIR$/uml/impl/message_impl.puml" />
         <option value="$PROJECT_DIR$/uml/impl/message_push_impl.puml" />
         <option value="$PROJECT_DIR$/uml/impl/api_gateway.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/ws_time_line.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/ws_time_line_init.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/ws_time_line_conn.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/ws_time_line_cli.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/passport_impl_time_line.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/ws_time_line_server.puml" />
         <option value="$PROJECT_DIR$/uml/impl/my.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/chat_impl.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/message_create_time_line.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/api_gateway_time_line.puml" />
+        <option value="$PROJECT_DIR$/uml/impl/data_pull.puml" />
+        <option value="$PROJECT_DIR$/golang/concurrence/coding.go" />
+        <option value="$PROJECT_DIR$/golang/collection/test_sync.go" />
+        <option value="$PROJECT_DIR$/golang/unsafe/ptr_test.go" />
+        <option value="$PROJECT_DIR$/golang/collection/cas.go" />
+        <option value="$PROJECT_DIR$/golang/concurrence/sync_test.go" />
+        <option value="$PROJECT_DIR$/golang/collection/sync_test.go" />
+        <option value="$PROJECT_DIR$/golang/concurrence/cas_test.go" />
+        <option value="$PROJECT_DIR$/golang/concurrence/sync_map.go" />
+        <option value="$PROJECT_DIR$/go_sdk/collection/sync_test.go" />
+        <option value="$PROJECT_DIR$/go_sdk/collection/collection_test.go" />
+        <option value="$PROJECT_DIR$/go_sdk/var/ptr_test.go" />
+        <option value="$PROJECT_DIR$/go_sdk/test/model.go" />
+        <option value="$PROJECT_DIR$/go_sdk/unsafe/ptr_test.go" />
+        <option value="$PROJECT_DIR$/design_pattern/singleton/singleton_test.go" />
+        <option value="$PROJECT_DIR$/go_sdk/concurrence/lock.go" />
+        <option value="$PROJECT_DIR$/go_sdk/concurrence/mutex_test.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -174,6 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,24 +217,29 @@
             <path>
               <item name="hello" type="b2602c69:ProjectViewProjectNode" />
               <item name="hello" type="462c0819:PsiDirectoryNode" />
-              <item name="golang" type="462c0819:PsiDirectoryNode" />
+              <item name="design_pattern" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hello" type="b2602c69:ProjectViewProjectNode" />
               <item name="hello" type="462c0819:PsiDirectoryNode" />
-              <item name="uml" type="462c0819:PsiDirectoryNode" />
+              <item name="design_pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="singleton" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hello" type="b2602c69:ProjectViewProjectNode" />
               <item name="hello" type="462c0819:PsiDirectoryNode" />
-              <item name="uml" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="go_sdk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+              <item name="go_sdk" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrence" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,18 +253,18 @@
     <property name="editor.config.ad.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/golang/concurrence" />
+      <recent name="$PROJECT_DIR$/uml/lark_v0" />
       <recent name="$PROJECT_DIR$/uml/impl" />
       <recent name="$PROJECT_DIR$/uml/summary" />
-      <recent name="$PROJECT_DIR$/websocket" />
-      <recent name="$PROJECT_DIR$/thrift/idl" />
-      <recent name="$PROJECT_DIR$/thrift/thrift_gen" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/uml/impl" />
@@ -245,37 +283,117 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build coding.go">
-    <configuration name="go build coding.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestUnlockRead in hello/go_sdk/concurrence">
+    <configuration name="TestAtomicUpdate in hello/golang/collection" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="hello" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/golang/concurrence/coding.go" />
-      <package value="hello" />
+      <working_directory value="$PROJECT_DIR$/golang/collection" />
+      <parameters value="check-go-version=false" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="hello/golang/collection" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestAtomicUpdate$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build hello.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestChanVarType in hello/go_sdk/collection" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="hello" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/websocket/hello.go" />
-      <package value="hello" />
+      <working_directory value="$PROJECT_DIR$/go_sdk/collection" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="hello/go_sdk/collection" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestChanVarType$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestUnlockRead in hello/go_sdk/concurrence" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <working_directory value="$PROJECT_DIR$/go_sdk/concurrence" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="hello/go_sdk/concurrence" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestUnlockRead$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestUnsafePointer in hello/go_sdk/var" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <working_directory value="$PROJECT_DIR$/go_sdk/var" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="hello/go_sdk/var" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestUnsafePointer$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestVisitPrivateField in hello/go_sdk/unsafe" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <working_directory value="$PROJECT_DIR$/go_sdk/unsafe" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="hello/go_sdk/unsafe" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestVisitPrivateField$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Test.TestAtomicUpdate in hello/golang/collection" />
+      <item itemvalue="Go Test.TestChanVarType in hello/go_sdk/collection" />
+      <item itemvalue="Go Test.TestUnsafePointer in hello/go_sdk/var" />
+      <item itemvalue="Go Test.TestVisitPrivateField in hello/go_sdk/unsafe" />
+      <item itemvalue="Go Test.TestUnlockRead in hello/go_sdk/concurrence" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build coding.go" />
-        <item itemvalue="Go Build.go build hello.go" />
+        <item itemvalue="Go Test.TestUnlockRead in hello/go_sdk/concurrence" />
+        <item itemvalue="Go Test.TestVisitPrivateField in hello/go_sdk/unsafe" />
+        <item itemvalue="Go Test.TestUnsafePointer in hello/go_sdk/var" />
+        <item itemvalue="Go Test.TestChanVarType in hello/go_sdk/collection" />
+        <item itemvalue="Go Test.TestAtomicUpdate in hello/golang/collection" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestAtomicUpdate_in_hello_golang_collection - 2021.05.04 at 12h 44m 09s.xml">
+      <configuration name="TestAtomicUpdate in hello/golang/collection" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestAtomicUpdate_in_hello_golang_collection - 2021.05.04 at 12h 45m 19s.xml">
+      <configuration name="TestAtomicUpdate in hello/golang/collection" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestAtomicUpdate_in_hello_golang_collection - 2021.05.04 at 12h 45m 56s.xml">
+      <configuration name="TestAtomicUpdate in hello/golang/collection" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestChanVarType_in_hello_go_sdk_collection - 2021.05.29 at 14h 29m 20s.xml">
+      <configuration name="TestChanVarType in hello/go_sdk/collection" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestUnsafePointer_in_hello_go_sdk_var - 2021.05.29 at 14h 51m 00s.xml">
+      <configuration name="TestUnsafePointer in hello/go_sdk/var" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestUnsafePointer_in_hello_go_sdk_var - 2021.05.29 at 14h 52m 55s.xml">
+      <configuration name="TestUnsafePointer in hello/go_sdk/var" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestVisitPrivateField_in_hello_go_sdk_unsafe - 2021.05.29 at 15h 11m 29s.xml">
+      <configuration name="TestVisitPrivateField in hello/go_sdk/unsafe" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestVisitPrivateField_in_hello_go_sdk_unsafe - 2021.05.29 at 15h 12m 39s.xml">
+      <configuration name="TestVisitPrivateField in hello/go_sdk/unsafe" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestUnlockRead_in_hello_go_sdk_concurrence - 2021.06.13 at 13h 05m 49s.xml">
+      <configuration name="TestUnlockRead in hello/go_sdk/concurrence" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestUnlockRead_in_hello_go_sdk_concurrence - 2021.06.13 at 13h 06m 49s.xml">
+      <configuration name="TestUnlockRead in hello/go_sdk/concurrence" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.3104435" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.3111588" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50120485" side_tool="true" weight="0.28540772" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -301,169 +419,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/go/src/html/template/template.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/std/websocket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/gorilla/client.go" />
-    <entry file="file://$PROJECT_DIR$/websocket/gorilla/server.go" />
-    <entry file="file://$PROJECT_DIR$/thrift/idl/idl.thrift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thrift/thrift_gen/echo/idl.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4065">
-          <caret line="271" column="36" selection-start-line="271" selection-start-column="36" selection-end-line="271" selection-end-column="36" />
-          <folding>
-            <element signature="e#128#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/my.go" />
-    <entry file="file://$PROJECT_DIR$/../git.apache.org/thrift.git/lib/go/thrift/protocol.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/http/clientserver_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1508" column="28" selection-start-line="1508" selection-start-column="28" selection-end-line="1508" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/http/httputil/reverseproxy.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="183" lean-forward="true" selection-start-line="183" selection-end-line="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/passport.png" />
-    <entry file="file://$PROJECT_DIR$/uml/impl/contact_impl.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/frontier/main.go" />
-    <entry file="file://$PROJECT_DIR$/websocket/frontier/client.go" />
-    <entry file="file://$PROJECT_DIR$/uml/impl/ws.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thrift/server/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#14#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/search.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/search.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/search_impl.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/search_impl.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/arch_impl.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/message_impl.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kafka/consumer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
-          <folding>
-            <element signature="e#14#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/container/list/list.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="184" column="15" selection-start-line="184" selection-start-column="15" selection-end-line="184" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lru/lru.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kafka/producer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="e#14#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/golang/concurrence/coding.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/sync/waitgroup.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#14#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/facade_gateway_down.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/facade_gateway_down.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
@@ -480,127 +436,327 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/arch.png">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/arch.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/middleware.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/middleware.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/facade_gateway_up.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/facade_gateway_up.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/biz_gateway.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/arch.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/overall.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/chat.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/chat.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/message.png">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/message.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/summary/message.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/message.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/arch_impl.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/arch_impl.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="19" column="18" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/golang/pool/worker_pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/message_push_impl.png">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/message_push_impl.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/passport_impl.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/passport_impl.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/ws.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/ws.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/chat_impl.png">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/chat_impl.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/message_impl.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/message_impl.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/chat_impl.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/message_push_impl.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/message_push_impl.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/api_gateway.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/api_gateway.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uml/impl/my.puml">
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/ws.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/ws_time_line_init.puml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="90">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/impl/ws_time_line.puml" />
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/ws_time_line_cli.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/ws_time_line_conn.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/api_gateway.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/passport_impl.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/passport_impl_time_line.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/my.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/chat_impl.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="36" column="91" selection-start-line="36" selection-start-column="91" selection-end-line="36" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/arch.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/api_gateway_time_line.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/ws_time_line_server.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/biz_gateway.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/summary/overall.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uml/lark_v0/impl/data_pull.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/concurrence/coding.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/pool/worker_pool.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka/consumer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
+          <folding>
+            <element signature="e#14#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lru/lru.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/sirupsen/logrus/exported.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/unsafe/unsafe.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-698">
+          <caret line="107" column="43" lean-forward="true" selection-start-line="107" selection-start-column="43" selection-end-line="107" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/golang/collection/cas.go" />
+    <entry file="file:///usr/local/go/src/sync/map.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5340">
+          <caret line="359" column="5" selection-start-line="359" selection-start-column="5" selection-end-line="359" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/sync/atomic/doc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/concurrence/cas_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="e#20#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/collection/sync_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#20#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/collection/collection_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/var/ptr_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#14#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/unsafe/ptr_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+          <folding>
+            <element signature="e#16#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/test/model.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design_pattern/singleton/singleton_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="e#19#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/concurrence/mutex_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="e#14#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go_sdk/concurrence/sync_map.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
         </state>
       </provider>
     </entry>
